@@ -14,10 +14,34 @@ Thanks [@baioc](https://github.com/baioc) for this amazing repo!
 <br/>
 
 
-## Starting the server
+## Starting the dockerized server
 
 ```sh
-$ mvn spring-boot:run
+$ docker compose up -d --build
+```
+
+Dockerfile
+```Dockerfile
+FROM openjdk:24-oraclelinux9
+MAINTAINER baeldung.com
+COPY target/padnt-0.2.0-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
+```
+
+docker-compose.yml
+```yml
+services:
+  message-server:
+    image: padnt:1.0.0
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./logs:/logs/tomcat         # Persist Tomcat logs
+      - ./database:/database
+    restart: always
+    container_name: padnt
 ```
 
 ### Environment variables
