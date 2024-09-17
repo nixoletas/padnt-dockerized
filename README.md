@@ -17,7 +17,7 @@ Thanks [@baioc](https://github.com/baioc) for this amazing repo!
 ## Starting the dockerized server
 
 ```sh
-$ docker compose up -d --build
+docker compose up -d --build
 ```
 
 Dockerfile
