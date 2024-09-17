@@ -1,7 +1,7 @@
 # Padn't
 
 This is a fork of [Baioc's Padn't](https://github.com/baioc/padnt)
-Thanks @baioc for this amazing repo!
+Thanks [@baioc](https://github.com/baioc) for this amazing repo!
 
 [Padn't](https://padnt.azurewebsites.net/) is a [Dontpad](https://dontpad.com/) clone implemented with Java Spring Boot.
 
