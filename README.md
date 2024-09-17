@@ -16,6 +16,11 @@ Thanks [@baioc](https://github.com/baioc) for this amazing repo!
 
 ## Starting the dockerized server
 
+build the app
+```
+mvn clean package
+```
+
 ```sh
 docker compose up -d --build
 ```
